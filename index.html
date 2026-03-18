@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NoVa | Shopify Admin Access</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --shopify-black: #121212;
+            --shopify-green: #008060;
+            --white: #ffffff;
+            --text-muted: #888888;
+            --transition: all 0.25s ease;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Inter', sans-serif; }
+        body { background-color: var(--white); color: var(--shopify-black); line-height: 1.6; }
+
+        /* Навигация */
+        nav {
+            position: sticky; top: 0; 
+            display: flex; justify-content: space-between; align-items: center;
+            padding: 1.2rem 8%; background: rgba(255, 255, 255, 0.98);
+            border-bottom: 1px solid #eeeeee; z-index: 1000;
+        }
+        .logo { font-weight: 800; font-size: 1.6rem; text-decoration: none; color: var(--shopify-black); }
+        
+        /* Исправленная кнопка справа сверху */
+        .btn-nav {
+            background: var(--shopify-black) !important;
+            color: var(--white) !important;
+            padding: 12px 24px !important;
+            border-radius: 6px;
+            font-weight: 600;
+            text-decoration: none;
+            display: inline-block;
+            transition: var(--transition);
+        }
+        .btn-nav:hover { background: #333333 !important; }
+
+        /* Hero */
+        .hero {
+            display: flex; align-items: center; justify-content: center;
+            min-height: 70vh; padding: 0 8%; background: linear-gradient(180deg, #ffffff, #f4f4f4);
+            text-align: center;
+        }
+        .hero-content h1 { font-size: clamp(2.5rem, 6vw, 4rem); font-weight: 800; margin-bottom: 20px; letter-spacing: -2px; }
+        .hero-content p { font-size: 1.2rem; color: #555; max-width: 600px; margin: 0 auto 40px; }
+
+        /* Оффер */
+        .price-card {
+            max-width: 450px; margin: 60px auto; padding: 50px;
+            border: 1px solid #eee; border-radius: 20px; text-align: center;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.05);
+        }
+        .main-price { font-size: 5rem; font-weight: 800; margin: 10px 0; }
+        
+        .btn-main {
+            display: block; width: 100%; background: var(--shopify-black); color: white;
+            padding: 18px; border-radius: 8px; text-decoration: none; font-weight: 700;
+            margin-top: 20px; transition: var(--transition); border: none; cursor: pointer;
+        }
+
+        /* Футер и НОВАЯ КНОПКА */
+        footer { background: var(--shopify-black); color: white; padding: 80px 8% 40px; }
+        .footer-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 40px; }
+        
+        /* Стиль кнопки в футере */
+        .admin-link-btn {
+            display: inline-block;
+            background: #2a2a2a;
+            color: #ffffff !important;
+            padding: 12px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-size: 0.9rem;
+            font-weight: 600;
+            margin-top: 10px;
+            border: 1px solid #444;
+            transition: var(--transition);
+        }
+        .admin-link-btn:hover {
+            background: var(--shopify-green);
+            border-color: var(--shopify-green);
+        }
+
+        .footer-col h4 { margin-bottom: 20px; font-size: 0.9rem; color: var(--text-muted); text-transform: uppercase; }
+        .footer-col p { font-size: 0.9rem; color: #ccc; margin-bottom: 15px; }
+        .bottom-bar { margin-top: 60px; padding-top: 30px; border-top: 1px solid #333; text-align: center; color: #666; font-size: 0.8rem; }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <a href="#" class="logo">NoVa</a>
+        <div style="display: flex; align-items: center;">
+            <a href="https://www.shopify.com" target="_blank" style="margin-right: 25px; text-decoration: none; color: black; font-weight: 500;">Shopify</a>
+            <a href="#offer" class="btn-nav">Get NoVa</a>
+        </div>
+    </nav>
+
+    <header class="hero">
+        <div class="hero-content">
+            <h1>Elevate Your Store<br>to NoVa Level.</h1>
+            <p>Modern, fast, and high-converting. The ultimate Shopify experience for 2026.</p>
+            <a href="#offer" class="btn-main" style="max-width: 250px; margin: 0 auto;">View Pricing</a>
+        </div>
+    </header>
+
+    <section id="offer">
+        <div class="price-card">
+            <span style="color: var(--shopify-green); font-weight: 700;">PROMO PRICE</span>
+            <div class="main-price">$15</div>
+            <p>To build a complete website with NoVa</p>
+            <p>in 3 days</p>
+            <button class="btn-main" onclick="location.href='https://www.shopify.com/free-trial'">Start Now</button>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-grid">
+            <div class="footer-col">
+                <h4>About NoVa</h4>
+                <p>Manage your themes and store settings directly.</p>
+                <a href="https://nova-283167.myshopify.com/" class="admin-link-btn" target="_blank">
+                    Open NoVa Themes →
+                </a>
+            </div>
+            <div class="footer-col">
+                <h4>Resources</h4>
+                <p>Explore the Shopify ecosystem.</p>
+                <a href="https://help.shopify.com" target="_blank" style="color: #ccc; text-decoration: none; display: block; margin-bottom: 10px;">Help Center</a>
+                <a href="https://shopify.dev" target="_blank" style="color: #ccc; text-decoration: none;">Shopify Dev</a>
+            </div>
+            <div class="footer-col">
+                <h4>Legal</h4>
+                <p>Security and privacy is our priority.</p>
+                <span style="color: #666; font-size: 0.9rem;">Privacy Policy &bull; Terms</span>
+            </div>
+        </div>
+        <div class="bottom-bar">
+            &copy; 2026 NoVa Brands. Official Promotion Site.
+        </div>
+    </footer>
+
+</body>
+</html>
